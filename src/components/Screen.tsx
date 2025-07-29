@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
 import { Box, BoxProps } from "./Box";
 
 export function Screen({

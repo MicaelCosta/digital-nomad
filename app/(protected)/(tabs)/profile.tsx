@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 
-export default function ExploreScreen() {
+export default function ProfileScreen() {
   return (
     <View
       style={{
@@ -11,7 +11,7 @@ export default function ExploreScreen() {
         backgroundColor: "#fff",
       }}
     >
-      <Text>Explore screen</Text>
+      <Text>Profile screen</Text>
     </View>
   );
 }
