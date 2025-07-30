@@ -40,8 +40,9 @@ export default function RootLayout() {
         <Stack.Screen name="(protected)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
         <Stack.Screen name="sign-in" />
-        <StatusBar style="auto" />
       </Stack>
+      
+      <StatusBar style="auto" />
     </ThemeProvider>
   );
 }

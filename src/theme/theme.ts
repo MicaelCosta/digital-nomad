@@ -32,35 +32,45 @@ export const theme = createTheme({
     s40: 40,
     s48: 48,
     s56: 56,
+    padding: 16
   },
   textVariants: {
     defaults: {
       color: "text",
       fontFamily: "PoppinsRegular",
+      fontSize: 16,
+      lineHeight: 18,//geralmente 2 pixel acima do fontsize
     },
     title28: {
       fontSize: 28,
       fontFamily: "PoppinsSemiBold",
+      lineHeight: 30,//geralmente 2 pixel acima do fontsize
     },
     title22: {
       fontSize: 22,
       fontFamily: "PoppinsSemiBold",
+      lineHeight: 24,//geralmente 2 pixel acima do fontsize
     },
     title16: {
       fontSize: 16,
       fontFamily: "PoppinsSemiBold",
+      lineHeight: 18,//geralmente 2 pixel acima do fontsize
     },
     text18: {
       fontSize: 18,
+      lineHeight: 20,//geralmente 2 pixel acima do fontsize
     },
     text16: {
       fontSize: 16,
+      lineHeight: 18,//geralmente 2 pixel acima do fontsize
     },
     text14: {
       fontSize: 14,
+      lineHeight: 16,//geralmente 2 pixel acima do fontsize
     },
     text12: {
       fontSize: 12,
+      lineHeight: 14,//geralmente 2 pixel acima do fontsize
     },
   },
   borderRadii: {

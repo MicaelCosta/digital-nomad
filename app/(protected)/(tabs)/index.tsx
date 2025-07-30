@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useRef } from "react";
+import { FlatList, ListRenderItemInfo } from "react-native";
 
 import { CityCard } from "@/src/components/CityCard";
 import { Screen } from "@/src/components/Screen";
 import { cityPreviewList } from "@/src/data/cities";
+import { useAppTheme } from "@/src/theme/useAppTheme";
 import { CityPreview } from "@/src/types";
-import { FlatList, ListRenderItemInfo } from "react-native";
+import { useScrollToTop } from "@react-navigation/native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
+  const { spacing } = useAppTheme();
+  const { top } = useSafeAreaInsets();
+
+  const flatlistRef = useRef(null);
+  useScrollToTop(flatlistRef);
+
   function renderItem({ item }: ListRenderItemInfo<CityPreview>) {
     return <CityCard cityPreview={item} />;
   }
 
   return (
     <Screen>
-      <FlatList data={cityPreviewList} renderItem={renderItem} />
+      <FlatList
+        ref={flatlistRef}
+        contentContainerStyle={{
+          gap: spacing.padding,
+          paddingTop: top,
+          paddingBottom: spacing.padding
+        }}
+        data={cityPreviewList}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
+      />
     </Screen>
   );
 }
