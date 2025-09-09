@@ -8,6 +8,7 @@ const palette = {
   charcoalGrey: "#302E2D",
   stoneGrey: "#5C5C5C",
   pureWhite: "#FFFFFF",
+  transparent: "transparent",
 };
 
 export const theme = createTheme({

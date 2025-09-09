@@ -8,7 +8,7 @@ import "react-native-reanimated";
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    IcoMoon: require('../assets/icons/icomoon.ttf'),
+    IcoMoon: require("../assets/icons/icomoon.ttf"),
     PoppinsBlack: require("../assets/fonts/Poppins-Black.ttf"),
     PoppinsBlackItalic: require("../assets/fonts/Poppins-BlackItalic.ttf"),
     PoppinsBold: require("../assets/fonts/Poppins-Bold.ttf"),
@@ -41,8 +41,8 @@ export default function RootLayout() {
         <Stack.Screen name="+not-found" />
         <Stack.Screen name="sign-in" />
       </Stack>
-      
-      <StatusBar style="auto" />
+
+      <StatusBar style="light" />
     </ThemeProvider>
   );
 }

@@ -4,6 +4,7 @@ import { FlatList, ListRenderItemInfo } from "react-native";
 import { CityCard } from "@/src/components/CityCard";
 import { Screen } from "@/src/components/Screen";
 import { CityFilter } from "@/src/containers/CityFilter";
+import { categories } from "@/src/data/categories";
 import { cityPreviewList } from "@/src/data/cities";
 import { useAppTheme } from "@/src/theme/useAppTheme";
 import { CityPreview } from "@/src/types";
@@ -28,13 +29,13 @@ export default function HomeScreen() {
         contentContainerStyle={{
           gap: spacing.padding,
           paddingTop: top,
-          paddingBottom: spacing.padding
+          paddingBottom: spacing.padding,
         }}
         data={cityPreviewList}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
-        ListHeaderComponent={<CityFilter />}
+        ListHeaderComponent={<CityFilter categories={categories} />}
       />
     </Screen>
   );
