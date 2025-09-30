@@ -5,7 +5,7 @@ import { CityDetailsHeader } from "@/src/containers/CityDetailsHeader";
 import { CityDetailsInfo } from "@/src/containers/CityDetailsInfo";
 import { CityDetailsMap } from "@/src/containers/CityDetailsMap";
 import { CityDetailsRelatedCities } from "@/src/containers/CityDetailsRelatedCities";
-import { CityDetailsTouristAttraction } from "@/src/containers/CityDetailsTouristAttraction";
+import { CityDetailsTouristAttractions } from "@/src/containers/CityDetailsTouristAttractions";
 import { useCityDetails } from "@/src/data/useCityDetails";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
@@ -23,7 +23,7 @@ export default function CityDetails() {
   }
 
   return (
-    <Screen style={{ paddingHorizontal: 0 }}>
+    <Screen style={{ paddingHorizontal: 0 }} scrollable>
       <CityDetailsHeader
         id={city.id}
         coverImage={city.coverImage}
@@ -38,7 +38,9 @@ export default function CityDetails() {
 
       <Divider paddingHorizontal="padding" />
 
-      <CityDetailsTouristAttraction />
+      <CityDetailsTouristAttractions
+        touristAttractions={city.touristAttractions}
+      />
 
       <Divider paddingHorizontal="padding" />
 
