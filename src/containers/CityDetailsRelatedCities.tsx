@@ -4,7 +4,7 @@ import { Text } from "../components/Text";
 
 export function CityDetailsRelatedCities() {
   return (
-    <Box>
+    <Box padding="padding">
       <Text>Related Cities</Text>
     </Box>
   );

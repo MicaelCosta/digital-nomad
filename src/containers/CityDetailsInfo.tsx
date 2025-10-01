@@ -11,7 +11,7 @@ export function CityDetailsInfo({
   description,
 }: CityDetailsInfoProps) {
   return (
-    <Box>
+    <Box padding="padding">
       <Text variant="title28">{name}</Text>
       <Text variant="text18" mt="s2">
         {country}

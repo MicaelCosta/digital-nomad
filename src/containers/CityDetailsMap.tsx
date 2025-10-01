@@ -4,7 +4,7 @@ import { Text } from "../components/Text";
 
 export function CityDetailsMap() {
   return (
-    <Box>
+    <Box padding="padding">
       <Text>Map</Text>
     </Box>
   );

@@ -10,7 +10,7 @@ export function CityDetailsTouristAttractions({
   touristAttractions,
 }: CityDetailsTouristAttractionsProps) {
   return (
-    <Box>
+    <Box padding="padding">
       <Text variant="title22" mb="s8">
         Pontos turísticos
       </Text>
